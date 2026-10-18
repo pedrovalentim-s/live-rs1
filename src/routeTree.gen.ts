@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LiveRs1RouteImport } from './routes/live-rs-1'
+import { Route as LiveRs2RouteImport } from './routes/live-rs-2'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiveRs1Route = LiveRs1RouteImport.update({
+  id: '/live-rs-1',
+  path: '/live-rs-1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveRs2Route = LiveRs2RouteImport.update({
+  id: '/live-rs-2',
+  path: '/live-rs-2',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/live-rs-1': typeof LiveRs1Route
+  '/live-rs-2': typeof LiveRs2Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/live-rs-1': typeof LiveRs1Route
+  '/live-rs-2': typeof LiveRs2Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/live-rs-1': typeof LiveRs1Route
+  '/live-rs-2': typeof LiveRs2Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/live-rs-1' | '/live-rs-2'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/live-rs-1' | '/live-rs-2'
+  id: '__root__' | '/' | '/live-rs-1' | '/live-rs-2'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LiveRs1Route: typeof LiveRs1Route
+  LiveRs2Route: typeof LiveRs2Route
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/live-rs-1': {
+      id: '/live-rs-1'
+      path: '/live-rs-1'
+      fullPath: '/live-rs-1'
+      preLoaderRoute: typeof LiveRs1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-rs-2': {
+      id: '/live-rs-2'
+      path: '/live-rs-2'
+      fullPath: '/live-rs-2'
+      preLoaderRoute: typeof LiveRs2RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LiveRs1Route: LiveRs1Route,
+  LiveRs2Route: LiveRs2Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
