@@ -91,9 +91,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Método 3 Estrelas para donos de restaurante faturarem mais todo mês com previsibilidade e lucro.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        property: "og:image",
+        content:
+          "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+      },
+      { name: "twitter:card", content: "summary" },
+      {
+        name: "twitter:image",
+        content:
+          "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+      },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+      },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

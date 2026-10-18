@@ -72,10 +72,17 @@ function LiveRs2() {
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
             {/* Coluna de texto (Headline, Subheadline, CTA) */}
             <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
-              {/* Badge indicativa Tasty Media */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/70 border border-indigo-500/30 text-indigo-300 text-xs font-semibold mb-4 sm:mb-5 tracking-wide uppercase">
-                <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping" />
-                Encontro Exclusivo • Ao Vivo
+              {/* Logo Tasty + Badge indicativa */}
+              <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
+                <img
+                  src="https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png"
+                  alt="Tasty Logo"
+                  className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg shadow-md shrink-0"
+                />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/70 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wide uppercase">
+                  <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping" />
+                  Encontro Exclusivo • Ao Vivo
+                </div>
               </div>
 
               {/* 2. HEADLINE */}

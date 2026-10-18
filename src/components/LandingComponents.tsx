@@ -1,6 +1,9 @@
 import React from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
+export const TASTY_LOGO_URL =
+  "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png";
+
 interface CtaButtonProps {
   buttonLink?: string;
   subtext?: string;
@@ -43,7 +46,8 @@ export function CtaButton({
 
 export function TopBar() {
   return (
-    <div className="w-full bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 border-b border-indigo-500/20 py-2.5 px-4 text-center">
+    <div className="w-full bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 border-b border-indigo-500/20 py-2.5 px-4 flex items-center justify-center gap-2">
+      <img src={TASTY_LOGO_URL} alt="Tasty" className="w-4 h-4 rounded-sm shrink-0 shadow-sm" />
       <p className="text-xs sm:text-sm font-semibold tracking-wide text-indigo-200 uppercase">
         segunda • 15h • AULA AO VIVO E GRATUITA
       </p>
