@@ -51,10 +51,12 @@ export function TopBar() {
   );
 }
 
-export function MarqueeBanner() {
-  const marqueeText =
-    "MÉTODO 3 ESTRELAS • EXCLUSIVO PARA DONOS DE RESTAURANTE DO RIO GRANDE DO SUL • ";
-  const repeatedText = Array(12).fill(marqueeText).join(" ");
+export function MarqueeBanner({
+  text = "MÉTODO 3 ESTRELAS • EXCLUSIVO PARA DONOS DE RESTAURANTE DO RIO GRANDE DO SUL • ",
+}: {
+  text?: string;
+}) {
+  const repeatedText = Array(12).fill(text).join(" ");
 
   return (
     <div
@@ -73,7 +75,11 @@ export function MarqueeBanner() {
   );
 }
 
-export function PresentersSection() {
+export function PresentersSection({
+  rickSubtitle = "fundador do Porto Dicas e sócio da Tasty",
+}: {
+  rickSubtitle?: string;
+}) {
   return (
     <div className="w-full py-12 px-4 bg-card/40 border-y border-border/50 my-10 rounded-2xl">
       <div className="max-w-3xl mx-auto">
@@ -102,9 +108,7 @@ export function PresentersSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="p-6 rounded-xl bg-background/80 border border-border/80 shadow-md">
             <h3 className="text-lg font-bold text-white mb-1">Rick Mottola</h3>
-            <p className="text-xs font-medium text-indigo-400 mb-4">
-              fundador do Porto Dicas e sócio da Tasty
-            </p>
+            <p className="text-xs font-medium text-indigo-400 mb-4">{rickSubtitle}</p>
             <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span aria-hidden="true" className="text-indigo-400 font-bold">
