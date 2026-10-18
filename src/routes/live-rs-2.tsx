@@ -33,8 +33,8 @@ function LiveRs2() {
     "https://vibe.filesafe.space/1792349844330925725/assets/76e5e23b-7c3b-4d87-a11c-c03a813cbdfc.png";
 
   const tags = [
-    "ITALIANO",
-    "CARNES E PARRILLA",
+    "RESTAURANTE ITALIANO",
+    "RESTAURANTE CARNES E PARRILLA",
     "SUSHI",
     "DELIVERY",
     "PIZZARIA",
@@ -194,7 +194,7 @@ function LiveRs2() {
             <div className="flex items-center gap-2 mb-4 justify-center sm:justify-start">
               <Utensils className="w-5 h-5 text-indigo-400" />
               <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                Para restaurantes como:
+                Para negócios de alimentação como:
               </h2>
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-2.5 justify-center sm:justify-start">
