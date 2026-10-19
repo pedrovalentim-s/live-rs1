@@ -127,6 +127,12 @@ export function PresentersSection({
                   </span>
                   <span>Já ajudou mais de 2.000 restaurantes a crescer com conteúdo</span>
                 </li>
+                <li className="flex items-start gap-2">
+                  <span aria-hidden="true" className="text-indigo-400 font-bold">
+                    •
+                  </span>
+                  <span>Especialista em conteúdo que vende para restaurantes</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -159,6 +165,12 @@ export function PresentersSection({
                     •
                   </span>
                   <span>Especialista em crescimento de restaurantes</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span aria-hidden="true" className="text-indigo-400 font-bold">
+                    •
+                  </span>
+                  <span>+7 anos no mercado de marketing e tecnologia</span>
                 </li>
               </ul>
             </div>
