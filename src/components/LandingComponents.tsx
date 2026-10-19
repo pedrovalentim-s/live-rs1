@@ -85,7 +85,7 @@ export function PresentersSection({
   rickSubtitle?: string;
 }) {
   const rickPhoto =
-    "https://vibe.filesafe.space/1792349844330925725/attachments/1382695a-7ed2-4c57-839c-3647527cfdcd.jpg";
+    "https://vibe.filesafe.space/1792349844330925725/attachments/0eff07c8-82a3-498f-8f6e-d3406e939317.png";
   const pedroPhotoPlaceholder =
     "https://vibe.filesafe.space/1792349844330925725/assets/cf6155b4-112d-4d3f-8444-a2e77211159b.png";
 
@@ -105,14 +105,9 @@ export function PresentersSection({
               <img
                 src={rickPhoto}
                 alt="Rick Mottola"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-2.5 left-3 right-3 text-center">
-                <span className="inline-block px-2.5 py-0.5 rounded-full bg-background/85 backdrop-blur-md text-[11px] font-semibold text-indigo-300 border border-indigo-500/30 shadow-sm">
-                  [FOTO: Rick Mottola]
-                </span>
-              </div>
             </div>
 
             {/* Conteúdo Rick */}
