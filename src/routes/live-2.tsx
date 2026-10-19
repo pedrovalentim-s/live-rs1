@@ -26,7 +26,7 @@ export const Route = createFileRoute("/live-2")({
 });
 
 function Live2() {
-  const ctaLink = "[LINK DO BOTÃO]";
+  const ctaLink = "https://chat.whatsapp.com/Jr8W5ZV0EyzG1VO3UilW4a";
 
   // Foto oficial do Rick Mottola
   const rickHeroImage =

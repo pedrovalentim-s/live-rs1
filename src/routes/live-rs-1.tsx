@@ -31,7 +31,7 @@ export const Route = createFileRoute("/live-rs-1")({
 });
 
 function LiveRs1() {
-  const ctaLink = "[LINK DO BOTÃO]";
+  const ctaLink = "https://chat.whatsapp.com/DzndJHyCSUq6lNOP9OhN9n";
 
   const tags = [
     "RESTAURANTE ITALIANO",
