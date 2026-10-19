@@ -86,8 +86,8 @@ export function PresentersSection({
 }) {
   const rickPhoto =
     "https://vibe.filesafe.space/1792349844330925725/attachments/0eff07c8-82a3-498f-8f6e-d3406e939317.png";
-  const pedroPhotoPlaceholder =
-    "https://vibe.filesafe.space/1792349844330925725/assets/cf6155b4-112d-4d3f-8444-a2e77211159b.png";
+  const pedroPhoto =
+    "https://vibe.filesafe.space/1792349844330925725/attachments/14090e8b-56ff-4012-929c-cf409ce1273f.png";
 
   return (
     <div className="w-full py-10 sm:py-12 px-4 bg-card/40 border-y border-border/50 my-10 rounded-2xl">
@@ -136,16 +136,11 @@ export function PresentersSection({
             {/* Foto Pedro */}
             <div className="relative w-full aspect-[4/3] bg-muted overflow-hidden border-b border-border/60">
               <img
-                src={pedroPhotoPlaceholder}
+                src={pedroPhoto}
                 alt="Pedro Valentim"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-2.5 left-3 right-3 text-center">
-                <span className="inline-block px-2.5 py-0.5 rounded-full bg-background/85 backdrop-blur-md text-[11px] font-semibold text-indigo-300 border border-indigo-500/30 shadow-sm">
-                  [ESPAÇO PARA FOTO: Pedro Valentim]
-                </span>
-              </div>
             </div>
 
             {/* Conteúdo Pedro */}
