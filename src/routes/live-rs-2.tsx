@@ -28,9 +28,9 @@ export const Route = createFileRoute("/live-rs-2")({
 function LiveRs2() {
   const ctaLink = "[LINK DO BOTÃO]";
 
-  // Imagem provisória do Rick (substituir depois pela foto original)
+  // Foto oficial do Rick Mottola
   const rickHeroImage =
-    "https://vibe.filesafe.space/1792349844330925725/assets/76e5e23b-7c3b-4d87-a11c-c03a813cbdfc.png";
+    "https://vibe.filesafe.space/1792349844330925725/attachments/1382695a-7ed2-4c57-839c-3647527cfdcd.jpg";
 
   const tags = [
     "RESTAURANTE ITALIANO",
@@ -182,11 +182,6 @@ function LiveRs2() {
                   </p>
                 </div>
               </div>
-
-              {/* Nota sobre foto provisória para facilidade de troca */}
-              <span className="mt-4 text-[11px] text-muted-foreground/70 font-mono tracking-wide">
-                [ESPAÇO PARA FOTO DO RICK]
-              </span>
             </div>
           </div>
         </section>
