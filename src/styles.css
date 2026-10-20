@@ -168,3 +168,103 @@
     outline-offset: 2px;
   }
 }
+
+/* Páginas da aula em versão clara (/live-3 e /live-4): isoladas pelo prefixo .ll */
+.ll {
+  color-scheme: light;
+  font-family: "Archivo", "Plus Jakarta Sans", sans-serif;
+}
+
+.ll h1,
+.ll h2,
+.ll h3 {
+  font-family: "Archivo", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.ll-hand {
+  font-family: "Caveat", cursive;
+}
+
+.ll-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 9999px;
+  background: #5b46e8;
+  padding: 1rem 1.6rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 30px -10px rgb(91 70 232 / 0.65);
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease;
+}
+
+.ll-cta:hover {
+  background: #4733d1;
+  transform: translateY(-1px);
+}
+
+.ll-cta:focus-visible {
+  outline: 3px solid rgb(91 70 232 / 0.35);
+  outline-offset: 3px;
+}
+
+.ll-cta.ll-cta-light {
+  background: #fff;
+  color: #16141f;
+  box-shadow: none;
+}
+
+.ll-cta.ll-cta-light:hover {
+  background: #efecff;
+}
+
+@media (max-width: 420px) {
+  .ll-cta {
+    width: 100%;
+    font-size: 0.82rem;
+    padding: 1rem 1.1rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Grifo "à mão" embaixo das palavras em destaque. */
+.ll-mark {
+  color: #5b46e8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 40 3, 90 3, 120 6 S 180 10, 198 4' fill='none' stroke='%235b46e8' stroke-width='3' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 0.32em;
+  background-position: 0 100%;
+  padding-bottom: 0.08em;
+}
+
+@keyframes ll-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ll-marquee {
+  animation: ll-marquee 40s linear infinite;
+}
+
+.ll-marquee-reverse {
+  animation: ll-marquee 48s linear infinite reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ll-marquee,
+  .ll-marquee-reverse {
+    animation: none;
+  }
+}
