@@ -135,30 +135,23 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/*
-          ==================================================
-          ESPAÇO PARA O CÓDIGO DO PIXEL DA META (FACEBOOK/INSTAGRAM PIXEL)
-          Cole o snippet JS do seu Pixel do Facebook abaixo:
-          ==================================================
-          <!-- Meta Pixel Code -->
-          <script>
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', 'SEU_PIXEL_ID_AQUI');
-            fbq('track', 'PageView');
-          </script>
-          <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"
-          /></noscript>
-          <!-- End Meta Pixel Code -->
-          ==================================================
-        */}
+        {/* Meta Pixel Code — ID 275959958415429 (PageView no load + Contact no clique do botão) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','275959958415429');fbq('track','PageView');",
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            alt=""
+            src="https://www.facebook.com/tr?id=275959958415429&ev=PageView&noscript=1"
+          />
+        </noscript>
+        {/* End Meta Pixel Code */}
         <HeadContent />
       </head>
       <body className="bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-white">

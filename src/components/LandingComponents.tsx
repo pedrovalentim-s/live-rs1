@@ -1,6 +1,12 @@
 import React from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 export const TASTY_LOGO_URL =
   "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png";
 
@@ -23,6 +29,11 @@ export function CtaButton({
         href={buttonLink}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => {
+          if (typeof window !== "undefined" && window.fbq) {
+            window.fbq("track", "Contact");
+          }
+        }}
         className="group relative w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 shadow-xl shadow-indigo-900/40 hover:shadow-indigo-600/50 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 active:scale-[0.99] border border-blue-400/30"
       >
         <MessageCircle
