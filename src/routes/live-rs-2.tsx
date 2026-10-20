@@ -106,6 +106,7 @@ function LiveRs2() {
               <div className="w-full max-w-md flex flex-col items-center lg:items-start">
                 <a
                   href={ctaLink}
+                  onClick={() => window.fbq?.("track", "Lead")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 shadow-xl shadow-indigo-900/40 hover:shadow-indigo-600/50 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 active:scale-[0.99] border border-blue-400/30"
@@ -248,6 +249,7 @@ function LiveRs2() {
             <div className="w-full max-w-md mx-auto flex flex-col items-center">
               <a
                 href={ctaLink}
+                onClick={() => window.fbq?.("track", "Lead")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 shadow-xl shadow-indigo-900/40 hover:shadow-indigo-600/50 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 active:scale-[0.99] border border-blue-400/30"
