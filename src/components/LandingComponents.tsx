@@ -31,7 +31,7 @@ export function CtaButton({
         rel="noopener noreferrer"
         onClick={() => {
           if (typeof window !== "undefined" && window.fbq) {
-            window.fbq("track", "CompleteRegistration");
+            window.fbq("track", "Lead");
           }
         }}
         className="group relative w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 shadow-xl shadow-indigo-900/40 hover:shadow-indigo-600/50 hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0 active:scale-[0.99] border border-blue-400/30"
