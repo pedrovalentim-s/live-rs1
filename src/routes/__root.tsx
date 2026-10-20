@@ -135,7 +135,7 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <head>
-        {/* Meta Pixel Code — ID 275959958415429 (PageView no load + Contact no clique do botão) */}
+        {/* Meta Pixel Code — ID 275959958415429 (PageView no load + CompleteRegistration no clique do botão) */}
         <script
           dangerouslySetInnerHTML={{
             __html:
