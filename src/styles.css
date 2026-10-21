@@ -229,9 +229,16 @@
 @media (max-width: 420px) {
   .ll-cta {
     width: 100%;
-    font-size: 0.82rem;
-    padding: 1rem 1.1rem;
-    letter-spacing: 0.02em;
+    gap: 0.5rem;
+    font-size: 0.86rem;
+    padding: 1rem 1rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  /* Em telas pequenas a seta sai para o texto caber em uma linha só. */
+  .ll-cta-arrow {
+    display: none;
   }
 }
 

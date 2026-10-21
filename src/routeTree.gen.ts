@@ -12,10 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Live1RouteImport } from './routes/live-1'
 import { Route as Live2RouteImport } from './routes/live-2'
-import { Route as Live3RouteImport } from './routes/live-3'
-import { Route as Live4RouteImport } from './routes/live-4'
 import { Route as LiveRs1RouteImport } from './routes/live-rs-1'
 import { Route as LiveRs2RouteImport } from './routes/live-rs-2'
+import { Route as LiveRs3RouteImport } from './routes/live-rs-3'
+import { Route as LiveRs4RouteImport } from './routes/live-rs-4'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -32,16 +32,6 @@ const Live2Route = Live2RouteImport.update({
   path: '/live-2',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Live3Route = Live3RouteImport.update({
-  id: '/live-3',
-  path: '/live-3',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Live4Route = Live4RouteImport.update({
-  id: '/live-4',
-  path: '/live-4',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LiveRs1Route = LiveRs1RouteImport.update({
   id: '/live-rs-1',
   path: '/live-rs-1',
@@ -52,34 +42,44 @@ const LiveRs2Route = LiveRs2RouteImport.update({
   path: '/live-rs-2',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiveRs3Route = LiveRs3RouteImport.update({
+  id: '/live-rs-3',
+  path: '/live-rs-3',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LiveRs4Route = LiveRs4RouteImport.update({
+  id: '/live-rs-4',
+  path: '/live-rs-4',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/live-1': typeof Live1Route
   '/live-2': typeof Live2Route
-  '/live-3': typeof Live3Route
-  '/live-4': typeof Live4Route
   '/live-rs-1': typeof LiveRs1Route
   '/live-rs-2': typeof LiveRs2Route
+  '/live-rs-3': typeof LiveRs3Route
+  '/live-rs-4': typeof LiveRs4Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/live-1': typeof Live1Route
   '/live-2': typeof Live2Route
-  '/live-3': typeof Live3Route
-  '/live-4': typeof Live4Route
   '/live-rs-1': typeof LiveRs1Route
   '/live-rs-2': typeof LiveRs2Route
+  '/live-rs-3': typeof LiveRs3Route
+  '/live-rs-4': typeof LiveRs4Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/live-1': typeof Live1Route
   '/live-2': typeof Live2Route
-  '/live-3': typeof Live3Route
-  '/live-4': typeof Live4Route
   '/live-rs-1': typeof LiveRs1Route
   '/live-rs-2': typeof LiveRs2Route
+  '/live-rs-3': typeof LiveRs3Route
+  '/live-rs-4': typeof LiveRs4Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -87,38 +87,38 @@ export interface FileRouteTypes {
     | '/'
     | '/live-1'
     | '/live-2'
-    | '/live-3'
-    | '/live-4'
     | '/live-rs-1'
     | '/live-rs-2'
+    | '/live-rs-3'
+    | '/live-rs-4'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/live-1'
     | '/live-2'
-    | '/live-3'
-    | '/live-4'
     | '/live-rs-1'
     | '/live-rs-2'
+    | '/live-rs-3'
+    | '/live-rs-4'
   id:
     | '__root__'
     | '/'
     | '/live-1'
     | '/live-2'
-    | '/live-3'
-    | '/live-4'
     | '/live-rs-1'
     | '/live-rs-2'
+    | '/live-rs-3'
+    | '/live-rs-4'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   Live1Route: typeof Live1Route
   Live2Route: typeof Live2Route
-  Live3Route: typeof Live3Route
-  Live4Route: typeof Live4Route
   LiveRs1Route: typeof LiveRs1Route
   LiveRs2Route: typeof LiveRs2Route
+  LiveRs3Route: typeof LiveRs3Route
+  LiveRs4Route: typeof LiveRs4Route
 }
 
 declare module '@tanstack/react-router' {
@@ -144,20 +144,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Live2RouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/live-3': {
-      id: '/live-3'
-      path: '/live-3'
-      fullPath: '/live-3'
-      preLoaderRoute: typeof Live3RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/live-4': {
-      id: '/live-4'
-      path: '/live-4'
-      fullPath: '/live-4'
-      preLoaderRoute: typeof Live4RouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/live-rs-1': {
       id: '/live-rs-1'
       path: '/live-rs-1'
@@ -172,6 +158,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LiveRs2RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/live-rs-3': {
+      id: '/live-rs-3'
+      path: '/live-rs-3'
+      fullPath: '/live-rs-3'
+      preLoaderRoute: typeof LiveRs3RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/live-rs-4': {
+      id: '/live-rs-4'
+      path: '/live-rs-4'
+      fullPath: '/live-rs-4'
+      preLoaderRoute: typeof LiveRs4RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -179,10 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   Live1Route: Live1Route,
   Live2Route: Live2Route,
-  Live3Route: Live3Route,
-  Live4Route: Live4Route,
   LiveRs1Route: LiveRs1Route,
   LiveRs2Route: LiveRs2Route,
+  LiveRs3Route: LiveRs3Route,
+  LiveRs4Route: LiveRs4Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
