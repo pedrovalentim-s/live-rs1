@@ -34,12 +34,14 @@ function LiveRs1() {
   const ctaLink = "https://chat.whatsapp.com/DzndJHyCSUq6lNOP9OhN9n";
 
   const tags = [
-    "RESTAURANTE ITALIANO",
-    "RESTAURANTE CARNES E PARRILLA",
-    "SUSHI",
+    "À LA CARTE",
+    "ALTA GASTRONOMIA",
     "DELIVERY",
     "PIZZARIA",
-    "PUB E BAR",
+    "HAMBURGUERIA",
+    "SUSHI",
+    "CHURRASCARIA E PARRILLA",
+    "BAR E PUB",
     "CASA DE EVENTOS",
     "ALIMENTAÇÃO SAUDÁVEL",
     "E MUITO MAIS",
@@ -88,7 +90,7 @@ function LiveRs1() {
             <div className="flex items-center gap-2 mb-4 justify-center sm:justify-start">
               <Utensils className="w-5 h-5 text-indigo-400" />
               <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                Para negócios de alimentação como:
+                Para restaurantes como:
               </h2>
             </div>
             <div className="flex flex-wrap gap-2 sm:gap-2.5 justify-center sm:justify-start">

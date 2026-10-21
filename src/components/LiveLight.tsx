@@ -42,12 +42,14 @@ const PEDRO_PHOTO = {
 };
 
 const TAGS = [
-  "RESTAURANTE ITALIANO",
-  "RESTAURANTE CARNES E PARRILLA",
-  "SUSHI",
+  "À LA CARTE",
+  "ALTA GASTRONOMIA",
   "DELIVERY",
   "PIZZARIA",
-  "PUB E BAR",
+  "HAMBURGUERIA",
+  "SUSHI",
+  "CHURRASCARIA E PARRILLA",
+  "BAR E PUB",
   "CASA DE EVENTOS",
   "ALIMENTAÇÃO SAUDÁVEL",
 ];
@@ -114,7 +116,7 @@ export function LiveLightPage({
         {/* Para quem é */}
         <section className="mx-auto max-w-4xl px-5 py-12 text-center sm:py-20">
           <h2 className="text-2xl font-extrabold leading-tight sm:text-3xl">
-            Para <span className="ll-mark whitespace-nowrap">negócios de alimentação</span> como:
+            Para <span className="ll-mark">restaurantes</span> como:
           </h2>
           <ul className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-2 sm:mt-8 sm:gap-2.5">
             {TAGS.map((t) => (
