@@ -107,11 +107,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "icon",
         type: "image/png",
-        href: "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+        href: "/live/logo-64.png",
       },
       {
         rel: "apple-touch-icon",
-        href: "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png",
+        href: "/live/logo-180.png",
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

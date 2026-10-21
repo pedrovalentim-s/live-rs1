@@ -29,6 +29,10 @@ export function useMarqueeSpeed(ref: RefObject<HTMLElement | null>, pxPerSecond:
   }, [ref, pxPerSecond]);
 }
 
+// Logo pequeno (64 px) para a faixa do topo e o ícone da aba; o original de 3000 px
+// (TASTY_LOGO_URL) fica só para a prévia de compartilhamento (og:image).
+export const TASTY_LOGO_SMALL = "/live/logo-64.png";
+
 export const TASTY_LOGO_URL =
   "https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png";
 
@@ -80,7 +84,13 @@ export function CtaButton({
 export function TopBar() {
   return (
     <div className="w-full bg-gradient-to-r from-blue-950 via-indigo-950 to-blue-950 border-b border-indigo-500/20 py-2.5 px-4 flex items-center justify-center gap-2">
-      <img src={TASTY_LOGO_URL} alt="Tasty" className="w-4 h-4 rounded-sm shrink-0 shadow-sm" />
+      <img
+        src={TASTY_LOGO_SMALL}
+        alt="Tasty"
+        width={16}
+        height={16}
+        className="w-4 h-4 rounded-sm shrink-0 shadow-sm"
+      />
       <p className="text-xs sm:text-sm font-semibold tracking-wide text-indigo-200 uppercase">
         segunda • 15h • AULA AO VIVO E GRATUITA
       </p>
@@ -119,10 +129,11 @@ export function PresentersSection({
 }: {
   rickSubtitle?: string;
 }) {
-  const rickPhoto =
-    "https://vibe.filesafe.space/1792349844330925725/attachments/0eff07c8-82a3-498f-8f6e-d3406e939317.png";
-  const pedroPhoto =
-    "https://vibe.filesafe.space/1792349844330925725/attachments/14090e8b-56ff-4012-929c-cf409ce1273f.png";
+  // Versões WebP no tamanho de exibição (originais em PNG de ~1,3 MB no vibe.filesafe.space).
+  const rickPhoto = "/live/rick-800.webp";
+  const rickSrcSet = "/live/rick-480.webp 480w, /live/rick-800.webp 800w";
+  const pedroPhoto = "/live/pedro-800.webp";
+  const pedroSrcSet = "/live/pedro-480.webp 480w, /live/pedro-800.webp 800w";
 
   return (
     <div className="w-full py-10 sm:py-12 px-4 bg-card/40 border-y border-border/50 my-10 rounded-2xl">
@@ -139,6 +150,12 @@ export function PresentersSection({
             <div className="relative w-full aspect-[4/3] bg-muted overflow-hidden border-b border-border/60">
               <img
                 src={rickPhoto}
+                srcSet={rickSrcSet}
+                sizes="(min-width: 768px) 360px, 100vw"
+                width={800}
+                height={800}
+                loading="lazy"
+                decoding="async"
                 alt="Rick Mottola"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
@@ -178,6 +195,12 @@ export function PresentersSection({
             <div className="relative w-full aspect-[4/3] bg-muted overflow-hidden border-b border-border/60">
               <img
                 src={pedroPhoto}
+                srcSet={pedroSrcSet}
+                sizes="(min-width: 768px) 360px, 100vw"
+                width={800}
+                height={1199}
+                loading="lazy"
+                decoding="async"
                 alt="Pedro Valentim"
                 className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-500"
               />

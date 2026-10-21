@@ -29,8 +29,8 @@ function Live2() {
   const ctaLink = "https://chat.whatsapp.com/Jr8W5ZV0EyzG1VO3UilW4a";
 
   // Foto oficial do Rick Mottola
-  const rickHeroImage =
-    "https://vibe.filesafe.space/1792349844330925725/attachments/1382695a-7ed2-4c57-839c-3647527cfdcd.jpg";
+  const rickHeroImage = "/live/rick-hero-800.webp";
+  const rickHeroSrcSet = "/live/rick-hero-480.webp 480w, /live/rick-hero-800.webp 800w";
 
   const tags = [
     "RESTAURANTE ITALIANO",
@@ -75,7 +75,9 @@ function Live2() {
               {/* Logo Tasty + Badge indicativa */}
               <div className="flex items-center gap-2.5 mb-4 sm:mb-5">
                 <img
-                  src="https://vibe.filesafe.space/1792349844330925725/attachments/a3536abe-8157-40ac-a56b-17a945b34005.png"
+                  src="/live/logo-64.png"
+                  width={32}
+                  height={32}
                   alt="Tasty Logo"
                   className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg shadow-md shrink-0"
                 />
@@ -148,6 +150,10 @@ function Live2() {
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-border/80 shadow-2xl bg-card/60">
                   <img
                     src={rickHeroImage}
+                    srcSet={rickHeroSrcSet}
+                    sizes="(min-width: 640px) 448px, 100vw"
+                    width={800}
+                    height={960}
                     alt="Rick Mottola - Fundador do Porto Dicas e sócio da Tasty"
                     className="w-full h-full object-cover object-top"
                   />
