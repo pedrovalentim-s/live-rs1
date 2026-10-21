@@ -242,6 +242,17 @@
   }
 }
 
+/* Celulares bem estreitos (Android pequeno): fonte e respiro menores para o texto
+   do botão caber inteiro em uma linha. */
+@media (max-width: 370px) {
+  .ll-cta {
+    gap: 0.4rem;
+    font-size: 0.76rem;
+    padding: 0.95rem 0.75rem;
+    letter-spacing: 0;
+  }
+}
+
 /* Grifo "à mão" embaixo das palavras em destaque. */
 .ll-mark {
   color: #5b46e8;

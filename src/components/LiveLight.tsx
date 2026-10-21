@@ -94,7 +94,8 @@ export function LiveLightPage({
                 </p>
                 <HeroCopy content={content} />
               </div>
-              <div>
+              {/* No mobile o Rick já aparece no cartão compacto acima da headline. */}
+              <div className="hidden md:block">
                 <RickPolaroid />
               </div>
             </div>
@@ -186,8 +187,8 @@ export function LiveLightPage({
         </section>
 
         {/* Fechamento */}
-        <section id="ll-fechamento" className="px-5 pb-12 sm:pb-20">
-          <div className="mx-auto max-w-4xl rounded-3xl bg-[#5b46e8] px-5 py-10 text-center text-white sm:px-12 sm:py-14">
+        <section id="ll-fechamento" className="px-3 pb-12 min-[360px]:px-5 sm:pb-20">
+          <div className="mx-auto max-w-4xl rounded-3xl bg-[#5b46e8] px-4 py-10 text-center text-white min-[360px]:px-5 sm:px-12 sm:py-14">
             <p className="mx-auto max-w-2xl text-[17px] leading-relaxed text-white/90 sm:text-xl">
               {content.closing}
             </p>
