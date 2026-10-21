@@ -152,6 +152,13 @@ function RootShell({ children }: { children: ReactNode }) {
           />
         </noscript>
         {/* End Meta Pixel Code */}
+        {/* Microsoft Clarity — projeto z0xsrd8ttu (páginas da aula no lp.tastymedia.com.br) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              '(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","z0xsrd8ttu");',
+          }}
+        />
         <HeadContent />
       </head>
       <body className="bg-background text-foreground font-sans antialiased selection:bg-primary/30 selection:text-white">
