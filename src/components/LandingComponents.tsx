@@ -1,10 +1,32 @@
-import React from "react";
+import React, { useEffect, useRef, type RefObject } from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
   }
+}
+
+// Velocidade das faixas passantes "Método 3 Estrelas", em pixels por segundo.
+// A duração da animação é calculada pelo tamanho do texto, então todas as faixas
+// andam na mesma velocidade, seja qual for o texto (amplo ou RS) ou a tela.
+export const MARQUEE_SPEED = 25;
+
+/** Ajusta a duração da animação da faixa para andar a `pxPerSecond`. */
+export function useMarqueeSpeed(ref: RefObject<HTMLElement | null>, pxPerSecond: number) {
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const apply = () => {
+      // A animação percorre metade da largura (o conteúdo é duplicado).
+      const distance = el.scrollWidth / 2;
+      if (distance > 0) el.style.animationDuration = `${distance / pxPerSecond}s`;
+    };
+    apply();
+    const ro = new ResizeObserver(apply);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [ref, pxPerSecond]);
 }
 
 export const TASTY_LOGO_URL =
@@ -72,13 +94,15 @@ export function MarqueeBanner({
   text?: string;
 }) {
   const repeatedText = Array(12).fill(text).join(" ");
+  const trackRef = useRef<HTMLDivElement>(null);
+  useMarqueeSpeed(trackRef, MARQUEE_SPEED);
 
   return (
     <div
       aria-hidden="true"
       className="w-full bg-indigo-950/80 border-y border-indigo-500/30 py-3 overflow-hidden select-none"
     >
-      <div className="animate-marquee whitespace-nowrap flex items-center">
+      <div ref={trackRef} className="animate-marquee whitespace-nowrap flex items-center">
         <span className="text-xs sm:text-sm font-bold tracking-widest text-indigo-300 uppercase px-2">
           {repeatedText}
         </span>

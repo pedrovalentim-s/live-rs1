@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useRef, type ReactNode } from "react";
 import {
   ArrowRight,
   Instagram,
@@ -7,7 +7,7 @@ import {
   Smartphone,
   UtensilsCrossed,
 } from "lucide-react";
-import { TASTY_LOGO_URL } from "./LandingComponents";
+import { MARQUEE_SPEED, TASTY_LOGO_URL, useMarqueeSpeed } from "./LandingComponents";
 
 // Versão clara e "nativa" das páginas da aula (/live-3 sem foto, /live-4 com foto).
 // O texto vem de cada rota, igual ao das páginas originais (live-1 / live-2).
@@ -377,16 +377,27 @@ function Ticker({ text }: { text: string }) {
       {text}
     </span>
   ));
+  const backRef = useRef<HTMLDivElement>(null);
+  const frontRef = useRef<HTMLDivElement>(null);
+  // Faixa de trás um pouco mais lenta que a da frente, para dar profundidade.
+  useMarqueeSpeed(backRef, MARQUEE_SPEED * 0.8);
+  useMarqueeSpeed(frontRef, MARQUEE_SPEED);
   return (
     <div aria-hidden="true" className="relative overflow-hidden py-6">
       <div className="absolute -inset-x-[5%] top-1/2 -translate-y-1/2 rotate-[2deg] bg-[#d9d2ff] py-2.5">
-        <div className="ll-marquee-reverse flex w-max whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-[#5b46e8]/60">
+        <div
+          ref={backRef}
+          className="ll-marquee-reverse flex w-max whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-[#5b46e8]/60"
+        >
           {items}
           {items}
         </div>
       </div>
       <div className="relative -mx-[5%] -rotate-[1.5deg] bg-[#16141f] py-2.5">
-        <div className="ll-marquee flex w-max whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-white">
+        <div
+          ref={frontRef}
+          className="ll-marquee flex w-max whitespace-nowrap text-sm font-extrabold uppercase tracking-wider text-white"
+        >
           {items}
           {items}
         </div>
