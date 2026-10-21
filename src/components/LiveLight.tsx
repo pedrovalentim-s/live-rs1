@@ -395,13 +395,9 @@ function RickPolaroid() {
           </span>
         </figcaption>
       </figure>
+      <Sticker className="-top-5 -left-10 -rotate-3" value="+520 mil" label="seguidores no nicho" />
       <Sticker
-        className="-left-6 top-6 -rotate-3 sm:-left-10"
-        value="+520 mil"
-        label="seguidores no nicho"
-      />
-      <Sticker
-        className="-right-5 bottom-20 rotate-2 sm:-right-8"
+        className="-right-8 bottom-24 rotate-2"
         value="+2.000"
         label="restaurantes impactados"
       />
@@ -409,10 +405,12 @@ function RickPolaroid() {
   );
 }
 
+// No mobile os números já aparecem no cartão compacto acima da headline, então os
+// adesivos só aparecem a partir de sm e ficam nos cantos, fora do rosto.
 function Sticker({ value, label, className }: { value: string; label: string; className: string }) {
   return (
     <div
-      className={`absolute rounded-xl border-2 border-[#16141f] bg-[#fff8d6] px-3 py-2 shadow-[3px_3px_0_#16141f] ${className}`}
+      className={`absolute hidden rounded-xl border-2 border-[#16141f] bg-[#fff8d6] px-3 py-2 shadow-[3px_3px_0_#16141f] sm:block ${className}`}
     >
       <p className="text-lg font-extrabold leading-none sm:text-2xl">{value}</p>
       <p className="mt-0.5 text-[11px] font-semibold leading-tight text-[#4a4540] sm:text-xs">
